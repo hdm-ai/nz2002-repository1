@@ -1,0 +1,22 @@
+@mixin t3($type:all, $time:1s) {
+    -webkit-transition: $type $time;
+    -moz-transition: $type $time;
+    -ms-transition: $type $time;
+    -o-transition: $type $time;
+    transition: $type $time;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    padding-top: 50px;
+    text-align: center;
+    color: blueviolet;
+    @include t3();
+    &:hover {
+        color: red;
+    }
+}
